@@ -15,6 +15,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'JuliaEditorSupport/julia-vim'
+
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "bubblegum"
 
@@ -56,3 +58,6 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+set visualbell
+
+runtime macros/matchit.vim

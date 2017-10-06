@@ -3,8 +3,6 @@
 POWERLEVEL9K_MODE='awesome-patched'
 
 export ENV_PATH=$HOME/.env/zsh
-source $ENV_PATH/functions/bbc
-source $ENV_PATH/functions/php
 
 # Path to your oh-my-zsh installation.
 export ZSH=$ENV_PATH/.oh-my-zsh
@@ -24,10 +22,10 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-export UPDATE_ZSH_DAYS=6
+# export UPDATE_ZSH_DAYS=6
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -58,7 +56,10 @@ export UPDATE_ZSH_DAYS=6
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(common-aliases symfony2 vagrant fasd history history-substring-search zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git dnf common-aliases symfony2 vagrant fasd zsh-syntax-highlighting history history-substring-search zsh-autosuggestions python pyenv pip tmux)
+
+# Removes right prompt side indentation 
+ZLE_RPROMPT_INDENT=0
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,23 +94,42 @@ source $ZSH/oh-my-zsh.sh
 
 # POWERLEVEL9K settings
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time dir root_indicator)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv anaconda pyenv vcs)
 
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND="green"
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
-POWERLEVEL9K_DIR_HOME_BACKGROUND="green"
-POWERLEVEL9K_DIR_HOME_FOREGROUND="white"
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND="green"
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="white"
+POWERLEVEL9K_TIME_BACKGROUND="017"
+POWERLEVEL9K_TIME_FOREGROUND="063"
+
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND="red"
+POWERLEVEL9K_DIR_HOME_BACKGROUND="yellow"
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND="blue"
+
+POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="black"
+POWERLEVEL9K_DIR_HOME_FOREGROUND="black"
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="black"
+
+POWERLEVEL9K_PYENV_BACKGROUND="yellow"
+POWERLEVEL9K_PYENV_FOREGROUND="blue"
+
+POWERLEVEL9K_ANACONDA_BACKGROUND="017"
+POWERLEVEL9K_ANACONDA_FOREGROUND="green"
 
 POWERLEVEL9K_HOME_ICON=''
 POWERLEVEL9K_HOME_SUB_ICON=''
 POWERLEVEL9K_FOLDER_ICON=''
 
 export DEFAULT_USER="$USER"
-function git_prompt_info() {
-    ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-    echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
-}
 
+###################################################################
+# path stuff
+if [ "$PATH_GUARD" != true ] # path guard test
+then
+
+export PATH_GUARD=true
+
+#PATH=$HOME/anaconda3/bin:$HOME/.local/bin:$PATH
+
+export PATH
+fi # end path guard
+# end path stuff
+##################################################################

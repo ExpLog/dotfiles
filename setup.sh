@@ -114,10 +114,12 @@ installohmyzsh() {
   printf "${NORMAL}"
 }
 
+sudo dnf install tmux
+
 ENVPATH="$HOME/.env"
 ZSH="$ENVPATH/zsh/.oh-my-zsh"
 mkdir "$ENVPATH"
-cp -R zsh vim "$ENVPATH"
+cp -R zsh vim tmux "$ENVPATH"
 installohmyzsh
 git clone https://github.com/bhilburn/powerlevel9k.git "$ZSH/custom/themes/powerlevel9k"
 git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH/custom/plugins/zsh-autosuggestions"
@@ -125,4 +127,5 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH/custom/
 ln -sf "$HOME/.env/zsh/.zshrc" "$HOME/.zshrc"
 ln -sf "$HOME/.env/vim/.vim" "$HOME/.vim"
 ln -sf "$HOME/.env/vim/.vimrc" "$HOME/.vimrc"
+ln -sf "$HOME/.env/tmux/.tmux.conf" "$HOME/.tmux.conf"
 env zsh
