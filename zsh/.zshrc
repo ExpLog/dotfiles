@@ -134,4 +134,5 @@ fi # end path guard
 # end path stuff
 ##################################################################
 # my aliases
-alias youtube-dl-mp3="youtube-dl --extract-audio --audio-format mp3 --prefer-ffmpeg"
+alias ytdl-mp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 128K --prefer-ffmpeg"
+alias ytdl-ch-mp3="ytdl-mp3 --continue --ignore-errors --no-overwrites"
