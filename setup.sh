@@ -114,7 +114,7 @@ installohmyzsh() {
   printf "${NORMAL}"
 }
 
-sudo dnf install tmux
+sudo dnf install tmux tmux-powerline
 
 ENVPATH="$HOME/.env"
 ZSH="$ENVPATH/zsh/.oh-my-zsh"
