@@ -133,3 +133,5 @@ export PATH
 fi # end path guard
 # end path stuff
 ##################################################################
+# my aliases
+alias youtube-dl-mp3="youtube-dl --extract-audio --audio-format mp3 --prefer-ffmpeg"
