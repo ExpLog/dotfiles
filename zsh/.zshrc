@@ -133,6 +133,13 @@ export PATH
 fi # end path guard
 # end path stuff
 ##################################################################
+
 # my aliases
 alias ytdl-mp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 128K --prefer-ffmpeg"
 alias ytdl-ch-mp3="ytdl-mp3 --continue --ignore-errors --no-overwrites"
+
+alias update_env="cd ~/dotfiles; ./update_env.sh; cd -; echo .env was updated."
+alias edit_zshrc="vim ~/dotfiles/zsh/.zshrc"
+
+# my opts
+setopt NO_BEEP
