@@ -1,5 +1,4 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 POWERLEVEL9K_MODE='awesome-patched'
 
 export ENV_PATH=$HOME/.env/zsh
@@ -127,7 +126,7 @@ then
 
 export PATH_GUARD=true
 
-export PATH="/root/anaconda3/bin:$PATH"
+export PATH="$HOME/anaconda3/bin:$PATH"
 
 fi # end path guard
 # end path stuff
