@@ -127,7 +127,7 @@ then
 
 export PATH_GUARD=true
 
-export PATH="$PATH:/root/anaconda3/bin"
+export PATH="/root/anaconda3/bin:$PATH"
 
 fi # end path guard
 # end path stuff
