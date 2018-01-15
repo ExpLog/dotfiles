@@ -2,11 +2,11 @@
 POWERLEVEL9K_MODE='awesome-patched'
 
 export ENV_PATH=$HOME/.env/zsh
-
 # Path to your oh-my-zsh installation.
 export ZSH=$ENV_PATH/.oh-my-zsh
-
 export EDITOR=vim
+
+export ZSH_TMUX_AUTOSTART=true
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -55,7 +55,20 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git dnf common-aliases symfony2 vagrant fasd zsh-syntax-highlighting history history-substring-search zsh-autosuggestions python pyenv pip tmux)
+plugins=(
+    git 
+    dnf 
+    common-aliases 
+    fasd 
+    zsh-syntax-highlighting 
+    history 
+    history-substring-search 
+    zsh-autosuggestions 
+    python 
+    pyenv
+    pip 
+    tmux
+)
 
 # Removes right prompt side indentation 
 ZLE_RPROMPT_INDENT=0
@@ -107,6 +120,7 @@ POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="black"
 POWERLEVEL9K_DIR_HOME_FOREGROUND="black"
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="black"
 
+POWERLEVEL9K_PYTHON_ICON="\U1F40D"
 POWERLEVEL9K_PYENV_BACKGROUND="yellow"
 POWERLEVEL9K_PYENV_FOREGROUND="blue"
 
