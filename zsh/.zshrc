@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # POWERLEVEL9K settings
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time dir root_indicator)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv anaconda pyenv vcs)
 
@@ -150,7 +150,7 @@ fi # end path guard
 alias ytdl-mp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 128K --prefer-ffmpeg"
 alias ytdl-ch-mp3="ytdl-mp3 --continue --ignore-errors --no-overwrites"
 
-alias update_env="cd ~/dotfiles; ./update_env.sh; cd -; echo .env was updated."
+alias update_env="~/dotfiles/update_env.sh"
 alias edit_zshrc="vim ~/dotfiles/zsh/.zshrc"
 
 # my opts
