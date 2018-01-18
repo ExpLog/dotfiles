@@ -1,0 +1,11 @@
+alias update_env="~/dotfiles/update_env.sh"
+alias update_aliases="update_env && source $ENV_PATH/aliases"
+alias edit_zshrc="vim ~/dotfiles/zsh/.zshrc"
+alias edit_aliases="vim ~/dotfiles/zsh/aliases"
+
+alias ytdl-mp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 128K --prefer-ffmpeg"
+alias ytdl-ch-mp3="ytdl-mp3 --continue --ignore-errors --no-overwrites"
+
+alias hibernate="sudo rtcwake -l -m mem"
+alias hibernate_until_tomorrow='hibernate -m mem --date $(date -d "tomorrow 9am" +"%F %H:%M:%S")'
+alias hibernate_until_monday='hibernate -m mem --date $(date -d "next monday 9am" +"%F %H:%M:%S")'

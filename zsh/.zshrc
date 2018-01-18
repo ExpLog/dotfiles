@@ -2,11 +2,13 @@
 POWERLEVEL9K_MODE='awesome-patched'
 
 export ENV_PATH=$HOME/.env/zsh
-# Path to your oh-my-zsh installation.
+
 export ZSH=$ENV_PATH/.oh-my-zsh
+export ZSH_TMUX_AUTOSTART=true
+
 export EDITOR=vim
 
-export ZSH_TMUX_AUTOSTART=true
+source $ENV_PATH/aliases
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -145,13 +147,6 @@ export PATH="$HOME/anaconda3/bin:$PATH"
 fi # end path guard
 # end path stuff
 ##################################################################
-
-# my aliases
-alias ytdl-mp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 128K --prefer-ffmpeg"
-alias ytdl-ch-mp3="ytdl-mp3 --continue --ignore-errors --no-overwrites"
-
-alias update_env="~/dotfiles/update_env.sh"
-alias edit_zshrc="vim ~/dotfiles/zsh/.zshrc"
 
 # my opts
 setopt NO_BEEP
