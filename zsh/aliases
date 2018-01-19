@@ -7,5 +7,5 @@ alias ytdl-mp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 12
 alias ytdl-ch-mp3="ytdl-mp3 --continue --ignore-errors --no-overwrites"
 
 alias hibernate="sudo rtcwake -l -m mem"
-alias hibernate_until_tomorrow='hibernate -m mem --date $(date -d "tomorrow 9am" +"%F %H:%M:%S")'
-alias hibernate_until_monday='hibernate -m mem --date $(date -d "next monday 9am" +"%F %H:%M:%S")'
+alias hibernate_until_tomorrow='hibernate -m mem --date $(date -d "tomorrow 9am" +"%Y%m%d%H%M%S")'
+alias hibernate_until_monday='hibernate -m mem --date $(date -d "next monday 9am" +"%Y%m%d%H%M%S")'
