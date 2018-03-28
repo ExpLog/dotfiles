@@ -68,7 +68,8 @@ plugins=(
     zsh-autosuggestions 
     python 
     pyenv
-    pip 
+    pip
+    virtualenvwrapper
     tmux
 )
 
@@ -108,14 +109,14 @@ source $ZSH/oh-my-zsh.sh
 
 # POWERLEVEL9K settings
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time dir root_indicator)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir root_indicator)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv anaconda pyenv vcs)
 
-POWERLEVEL9K_TIME_BACKGROUND="017"
-POWERLEVEL9K_TIME_FOREGROUND="063"
+POWERLEVEL9K_OS_ICON_BACKGROUND="017"
+POWERLEVEL9K_OS_ICON_FOREGROUND="white"
 
 POWERLEVEL9K_DIR_DEFAULT_BACKGROUND="red"
-POWERLEVEL9K_DIR_HOME_BACKGROUND="yellow"
+POWERLEVEL9K_DIR_HOME_BACKGROUND="blue"
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND="blue"
 
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="black"
@@ -142,8 +143,21 @@ then
 
 export PATH_GUARD=true
 
-export PATH="$HOME/anaconda3/bin:$PATH"
+# Anaconda
+if [ -d $HOME/anaconda3 ]; then
+    export ANACONDA_HOME="$HOME/anaconda3"
+    export ANACONDA_BIN="$ANACONDA_HOME/bin"
+    export PATH="$PATH:$ANACONDA_BIN"
+fi
 
+# virtualenvwrapper
+#export WORKON_HOME="$HOME/.virtualenvs"
+#mkdir -p $WORKON_HOME
+#if [ -f $ANACONDA_BIN/virtualenvwrapper.sh ]; then
+#    source $ANACONDA_BIN/virtualenvwrapper.sh
+#fi
+
+export PATH="$PATH:$HOME/.local/bin"
 fi # end path guard
 # end path stuff
 ##################################################################
