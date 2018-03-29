@@ -151,11 +151,9 @@ if [ -d $HOME/anaconda3 ]; then
 fi
 
 # virtualenvwrapper
-#export WORKON_HOME="$HOME/.virtualenvs"
-#mkdir -p $WORKON_HOME
-#if [ -f $ANACONDA_BIN/virtualenvwrapper.sh ]; then
-#    source $ANACONDA_BIN/virtualenvwrapper.sh
-#fi
+export WORKON_HOME="$HOME/.virtualenvs"
+export PROJECT_HOME="$HOME/Projects"
+mkdir -p $WORKON_HOME
 
 export PATH="$PATH:$HOME/.local/bin"
 fi # end path guard
