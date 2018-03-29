@@ -3,5 +3,6 @@ if [ ! -d $HOME/.ssh ]; then
 fi
 
 ssh-keygen
-touch $HOME/.ssh/config
+
+echo "ServerAliveInterval 120" > $HOME/.ssh/config
 chmod 600 $HOME/.ssh/config
