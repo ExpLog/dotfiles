@@ -1,5 +1,5 @@
 if [ ! -d $HOME/.ssh ]; then
-    mdkir $HOME/.ssh
+    mkdir $HOME/.ssh
 fi
 
 ssh-keygen

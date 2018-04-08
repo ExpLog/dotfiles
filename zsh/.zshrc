@@ -2,11 +2,10 @@
 POWERLEVEL9K_MODE='awesome-patched'
 
 export ENV_PATH=$HOME/.env/zsh
-
 export ZSH=$ENV_PATH/.oh-my-zsh
 export ZSH_TMUX_AUTOSTART=true
-
 export EDITOR=vim
+export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"
 
 source $ENV_PATH/aliases
 
@@ -155,7 +154,6 @@ export WORKON_HOME="$HOME/.virtualenvs"
 export PROJECT_HOME="$HOME/Projects"
 mkdir -p $WORKON_HOME
 
-export PATH="$PATH:$HOME/.local/bin"
 fi # end path guard
 # end path stuff
 ##################################################################
