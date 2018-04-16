@@ -155,7 +155,6 @@ fi
 # virtualenvwrapper
 export WORKON_HOME="$HOME/.virtualenvs"
 export PROJECT_HOME="$HOME/Projects"
-mkdir -p $WORKON_HOME
 
 fi # end path guard
 # end path stuff
