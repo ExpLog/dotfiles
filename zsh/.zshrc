@@ -153,6 +153,8 @@ fi
 export WORKON_HOME="$HOME/.virtualenvs"
 export PROJECT_HOME="$HOME/Projects"
 
+export PATH="$PATH:$HOME/.local/bin"
+
 fi # end path guard
 # end path stuff
 ##################################################################

@@ -1,7 +1,7 @@
 dotfiles
 =========
 
-Setup
+zsh/vim Setup
 -----
 
   1. Install zsh
@@ -18,12 +18,11 @@ Setup
 
   3. Run the setup script
   ```
-    ./setup.sh
+    ./install_oh_my_zsh.sh
   ```
   4. Install the font
 
-
-  6. Make `zsh` your default shell
+  5. Make `zsh` your default shell
 
   ```
     chsh -s /bin/zsh
