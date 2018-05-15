@@ -1,3 +1,6 @@
+# This is to make sure that we are using 256 colors -- this is necessary when using guake terminal emulator
+export TERM="xterm-256color"
+
 # If you come from bash you might have to change your $PATH.
 POWERLEVEL9K_MODE='awesome-patched'
 
