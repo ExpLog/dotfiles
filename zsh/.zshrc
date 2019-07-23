@@ -156,7 +156,15 @@ fi
 export WORKON_HOME="$HOME/.virtualenvs"
 export PROJECT_HOME="$HOME/Projects"
 
+# virtualenvwrapper is not being sourced correctly, for some reason
+# this is a fix
+source `which virtualenvwrapper.sh`
+
 export PATH="$PATH:$HOME/.local/bin"
+
+# stuff for sqlplus64
+# TODO: should this be outside of the pathguard?
+export LD_LIBRARY_PATH=/usr/lib/oracle/18.3/client64/lib:$LD_LIBRARY_PATH
 
 fi # end path guard
 # end path stuff

@@ -5,9 +5,3 @@ alias edit-alias="vim ~/dotfiles/zsh/aliases"
 # youtube-download aliases to download as mp3
 alias ytdl-mp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 128K --prefer-ffmpeg -o \"%(title)s.%(ext)s\""
 alias ytdl-ch-mp3="ytdl-mp3 --continue --ignore-errors --no-overwrites"
-
-# possible aliases for sleeping from the cli -- hibernate_until seems broken
-alias lock="gnome-screensaver-command -l"
-alias hibernate="sudo rtcwake -l -m mem"
-alias hibernate_until_tomorrow='hibernate -m mem --date $(date -d "tomorrow 9am" +"%Y%m%d%H%M%S")'
-alias hibernate_until_monday='hibernate -m mem --date $(date -d "next monday 9am" +"%Y%m%d%H%M%S")'
